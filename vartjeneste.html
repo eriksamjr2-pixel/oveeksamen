@@ -1,26 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html lang="no">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>oveeksamen</title>
-    <!-- linker til Bootstrap CDN for ferdige klasser og komponenter -->
+    <title>Vårtjeneste - Grønn Logistikk AS</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <!-- lokal stylesheet for egne stiler -->
     <link rel="stylesheet" href="style.css" />
-    <!--i koden over linker jeg både bootstrap og stylesheet'en min til html siden-->
+    <link rel="stylesheet" href="vartjeneste.css" />
   </head>
   <body>
     <div class="topcontainer">
-      <!-- lager en flexcontainer som skal være på toppen av siden -->
       <div class="overskrift">
         <a href="index.html" class="header-link"><h1>GRØNN LOGISTIKK AS</h1></a>
-        <!-- legger til en h1 overskrift altså et header element -->
       </div>
 
       <div class="midmenu">
@@ -41,18 +37,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="index.html"
-                    >Hjem</a
-                  >
+                  <a class="nav-link" href="index.html">Hjem</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="omoss.html">Om oss</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="vartjeneste.html">Vårtjeneste</a>
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="vartjeneste.html"
+                    >Vårtjeneste</a
+                  >
                 </li>
                 <li class="nav-item dropdown">
                   <a
@@ -97,66 +93,69 @@
         </nav>
       </div>
     </div>
-    <!-- avslutter topcontainer -->
 
-    <!-- Bootstrap JavaScript for interaktive komponenter (dropdown fungerer) -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <!-- linker bootstrap sitt javascript til html siden -->
 
     <main class="homepage-hero">
       <section class="hero">
         <div class="hero-content">
-          <h2>Grønn logistikk AS satser på en smartere fremtid</h2>
+          <h2>Våre tjenester</h2>
           <p>
-            Grønn Logistikk AS er et ledende selskap innen bærekraftig
-            logistikk. Vi tilbyr innovative løsninger som reduserer
-            miljøpåvirkningen av transport og distribusjon, samtidig som vi
-            optimaliserer kostnader og effektivitet for våre kunder.
+            Grønn Logistikk AS tilbyr omfattende bærekraftige
+            logistikk-løsninger som kombinerer effektivitet med miljøbevissthet.
           </p>
         </div>
       </section>
 
       <section class="article-section">
         <div class="article-card">
-          <h3>Om Grønn Logistikk AS</h3>
+          <h3>Hva vi gjør</h3>
           <div class="article-block">
             <p>
-              Vårt team består av eksperter med lang erfaring innen logistikk og
-              bærekraft. Vi bruker de nyeste teknologiene for å optimalisere
-              ruter, redusere utslipp og sikre effektiv distribusjon.
+              Vi spesialiserer oss på å optimalisere forsyningskjeder for
+              bedrifter i alle størrelser. Våre tjenester inkluderer
+              ruteplanlegging, lagerstyring og transportkoordinering.
             </p>
-            <button class="btn btn-success">Les mer</button>
+            <button class="btn btn-success">Les mer om optimalisering</button>
           </div>
           <div class="article-block">
             <p>
-              Vi fokuserer på å skape verdi for våre kunder gjennom effektive og
-              miljøvennlige løsninger. Fra små bedrifter til store konsern,
-              hjelper vi med å nå bærekraftsmålene og forbedre forsyningskjeden.
+              Hvordan vi gjør det: Ved å bruke avanserte algoritmer og AI-drevne
+              verktøy analyserer vi transportmønstre og identifiserer muligheter
+              for forbedring. Vi implementerer løsninger som reduserer
+              kjørelengde og øker lastegrad.
             </p>
-            <button class="btn btn-outline-success">Kontakt oss</button>
+            <button class="btn btn-outline-success">Se våre verktøy</button>
           </div>
           <div class="article-block">
             <p>
-              Med vår ekspertise i grønn logistikk, sikrer vi at din
-              forsyningskjede blir mer effektiv og bærekraftig. Kontakt oss for
-              å lære mer om våre tjenester og hvordan vi kan hjelpe deg.
+              Bærekraftig tilnærming: Alle våre løsninger er designet med
+              miljøet i tankene. Vi prioriterer elektriske kjøretøy, fornybare
+              energikilder og karbonkompensasjon. Vårt mål er å redusere
+              CO2-utslipp med minst 40% for våre kunder.
             </p>
-            <button class="btn btn-primary">Få tilbud</button>
+            <button class="btn btn-primary">Bærekraftsrapporter</button>
+          </div>
+          <div class="article-block">
+            <p>
+              Vi hjelper bedrifter med å nå sine bærekraftsmål samtidig som de
+              forbedrer lønnsomheten. Kontakt oss for en gratis konsultasjon om
+              hvordan vi kan transformere din logistikk.
+            </p>
+            <button class="btn btn-secondary">Kontakt oss</button>
           </div>
         </div>
       </section>
     </main>
 
     <div class="bottomcontainer">
-      <!-- footer container nederst på siden -->
       <footer>
         <p>© 2026 Grønn logistikk AS, ingen rettigheter reservert.</p>
       </footer>
     </div>
   </body>
 </html>
-<!-- tak for meg -->
