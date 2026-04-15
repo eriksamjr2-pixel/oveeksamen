@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Erik-2IM-Vurdering</title>
+    <title>oveeksamen</title>
     <!-- linker til Bootstrap CDN for ferdige klasser og komponenter -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -19,30 +19,75 @@
     <div class="topcontainer">
       <!-- lager en flexcontainer som skal være på toppen av siden -->
       <div class="overskrift">
-        <h1>LITAGOSHOPPER</h1>
+        <h1>GRØNN LOGISTIKK AS</h1>
         <!-- legger til en h1 overskrift altså et header element -->
-        <p>dette er en test for å vise kompetanse innenfor webutvikling</p>
-        <!-- legger til et avsnitt -->
       </div>
 
-      <!-- Dropdown meny med Bootstrap-klasser -->
-      <div class="dropdown">
-        <button
-          class="btn btn-secondary dropdown-toggle"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Dropdown button
-        </button>
-        <!-- listeelementer i dropdown -->
-        <ul class="dropdown-menu dropdown-menu-dark">
-          <li><a class="dropdown-item active" href="#">side1</a></li>
-          <li><a class="dropdown-item active" href="#">side2</a></li>
-          <li><a class="dropdown-item active" href="#">side3</a></li>
-        </ul>
+      <div class="midmenu">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Hjem</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">SignUp</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">LogIn</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Kjøp tjenester</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </nav>
       </div>
-      <!-- lager en dropdown meny med bootstrap klasser -->
     </div>
     <!-- avslutter topcontainer -->
 
@@ -54,160 +99,56 @@
     ></script>
     <!-- linker bootstrap sitt javascript til html siden -->
 
-    <!-- Første rad: 3 like kort med bilde + knapp -->
-    <div class="topmidcontainer">
-      <!-- container for midtbilder og kort -->
-      <div class="row">
-        <!-- kolonne 1 med eget kort/box -->
-        <div class="col1">
-          <div class="card image-card">
-            <!-- bildet i kortet -->
-            <img
-              src="tine_handel_artnr_6620__large.png"
-              class="card-img-top"
-              alt="bilde1"
-            />
-            <!-- felt under bildet med en blå bootstrap knapp -->
-            <div class="card-body">
-              <button class="btn btn-primary">knapp</button>
-            </div>
+    <main class="homepage-hero">
+      <section class="hero">
+        <div class="hero-content">
+          <h2>Grønn logistikk AS satser på en smartere fremtid</h2>
+          <p>
+            Grønn Logistikk AS er et ledende selskap innen bærekraftig
+            logistikk. Vi tilbyr innovative løsninger som reduserer
+            miljøpåvirkningen av transport og distribusjon, samtidig som vi
+            optimaliserer kostnader og effektivitet for våre kunder.
+          </p>
+        </div>
+      </section>
+
+      <section class="article-section">
+        <div class="article-card">
+          <h3>Om Grønn Logistikk AS</h3>
+          <div class="article-block">
+            <p>
+              Vårt team består av eksperter med lang erfaring innen logistikk og
+              bærekraft. Vi bruker de nyeste teknologiene for å optimalisere
+              ruter, redusere utslipp og sikre effektiv distribusjon.
+            </p>
+            <button class="btn btn-success">Les mer</button>
+          </div>
+          <div class="article-block">
+            <p>
+              Vi fokuserer på å skape verdi for våre kunder gjennom effektive og
+              miljøvennlige løsninger. Fra små bedrifter til store konsern,
+              hjelper vi med å nå bærekraftsmålene og forbedre forsyningskjeden.
+            </p>
+            <button class="btn btn-outline-success">Kontakt oss</button>
+          </div>
+          <div class="article-block">
+            <p>
+              Med vår ekspertise i grønn logistikk, sikrer vi at din
+              forsyningskjede blir mer effektiv og bærekraftig. Kontakt oss for
+              å lære mer om våre tjenester og hvordan vi kan hjelpe deg.
+            </p>
+            <button class="btn btn-primary">Få tilbud</button>
           </div>
         </div>
+      </section>
+    </main>
 
-        <!-- kolonne 2 med eget kort/box -->
-        <div class="col2">
-          <div class="card image-card">
-            <!-- bildet i kortet -->
-            <img
-              src="tine_handel_artnr_6620__large.png"
-              class="card-img-top"
-              alt="bilde2"
-            />
-            <!-- knappfelt under bildet -->
-            <div class="card-body">
-              <button class="btn btn-primary">knapp</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- kolonne 3 med eget kort/box -->
-        <div class="col3">
-          <div class="card image-card">
-            <!-- bildet i kortet -->
-            <img
-              src="tine_handel_artnr_6620__large.png"
-              class="card-img-top"
-              alt="bilde3"
-            />
-            <!-- knappfelt under bildet -->
-            <div class="card-body">
-              <button class="btn btn-primary">knapp</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- avslutter første row -->
-    </div>
-
-<div class="midmenu">
- <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-  <!-- midtcontainer for meny mellom radene -->
-
-    <!-- Andre rad: 3 like kort med bilde + knapp -->
-    <div class="topmidcontainer">
-      <!-- ny container for rad 2 -->
-      <div class="row">
-        <!-- kolonne 4 med eget kort/box -->
-        <div class="col4">
-          <div class="card image-card">
-            <!-- bildet i kortet -->
-            <img
-              src="tine_handel_artnr_6620__large.png"
-              class="card-img-top"
-              alt="bilde4"
-            />
-            <!-- knappfelt under bildet -->
-            <div class="card-body">
-              <button class="btn btn-primary">knapp</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- kolonne 5 med eget kort/box -->
-        <div class="col5">
-          <div class="card image-card">
-            <!-- bildet i kortet -->
-            <img
-              src="tine_handel_artnr_6620__large.png"
-              class="card-img-top"
-              alt="bilde5"
-            />
-            <!-- knappfelt under bildet -->
-            <div class="card-body">
-              <button class="btn btn-primary">knapp</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- kolonne 6 med eget kort/box -->
-        <div class="col6">
-          <div class="card image-card">
-            <!-- bildet i kortet -->
-            <img
-              src="tine_handel_artnr_6620__large.png"
-              class="card-img-top"
-              alt="bilde6"
-            />
-            <!-- knappfelt under bildet -->
-            <div class="card-body">
-              <button class="btn btn-primary">knapp</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- avslutter andre row -->
+    <div class="bottomcontainer">
+      <!-- footer container nederst på siden -->
+      <footer>
+        <p>© 2026 Grønn logistikk AS, ingen rettigheter reservert.</p>
+      </footer>
     </div>
   </body>
 </html>
-<div class="bottomcontainer">
-  <!-- footer container nederst på siden -->
-  <footer>
-    <p>© 2025 Erik's Vurderingsside. Ingen rettigheter reservert.</p>
-  </footer>
-</div>
 <!-- tak for meg -->

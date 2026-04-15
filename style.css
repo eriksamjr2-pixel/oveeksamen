@@ -1,13 +1,3 @@
-/* Top container: holder tittel og dropdown sammen */
-.topcontainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 1%;
-  background-color: rgb(32, 32, 32);
-}
-
 /* Overskrift: tekstinnstillinger for header-delen */
 .overskrift {
   align-items: left;
@@ -28,9 +18,42 @@
   background-color: rgb(157, 157, 157);
 }
 .midmenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+  z-index: 6;
+}
+
+.topcontainer {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 1%;
+  background-color: rgb(75, 151, 72);
+  position: relative;
+  z-index: 5;
 }
+
+.topcontainer:hover .midmenu,
+.topcontainer .midmenu:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.midmenu .navbar {
+  margin: 0;
+  border-radius: 0;
+}
+
 /* Hver col*-klasse holder et kort/box sentrert i sin celle */
 .col1,
 .col2,
@@ -142,5 +165,99 @@
   /* kortere bilder på mobil for bedre visning */
   .topmidcontainer .card-img-top {
     height: 140px; /* litt mindre på mobil */
+  }
+}
+
+/* Homepage hero and article section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  padding: 4rem 1rem;
+  background: #ffffff;
+  color: #1d3f20;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 760px;
+  padding: 2rem;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.hero-content h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 3vw, 3.25rem);
+  line-height: 1.05;
+}
+
+.hero-content p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 720px;
+}
+
+.btn {
+  border-radius: 0 !important;
+}
+
+.article-section {
+  padding: 4rem 1rem 2rem;
+  background-color: #f7f8f6;
+}
+
+.article-card {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.article-card h3 {
+  margin-bottom: 1.75rem;
+  font-size: 1.75rem;
+  color: #1d3f20;
+}
+
+.article-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e6ece2;
+}
+
+.article-block:last-child {
+  border-bottom: none;
+}
+
+.article-block p {
+  flex: 1 1 60%;
+  margin: 0;
+  color: #4a5a47;
+  font-size: 1rem;
+  line-height: 1.75;
+  min-width: 220px;
+}
+
+.article-block button {
+  flex: 0 0 auto;
+  min-width: 140px;
+}
+
+@media (max-width: 768px) {
+  .article-block {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .article-block button {
+    width: 100%;
   }
 }
