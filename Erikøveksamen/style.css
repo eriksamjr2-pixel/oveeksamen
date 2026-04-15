@@ -1,0 +1,263 @@
+/* Overskrift: tekstinnstillinger for header-delen */
+.overskrift {
+  align-items: left;
+  text-align: left;
+  font-family: "Arial Black", sans-serif;
+  font-size: 20px;
+  padding-right: 30%;
+  color: rgb(255, 255, 255);
+}
+
+/* Bottomcontainer (eksempel hvis brukt senere) */
+.bottomcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+  background-color: rgb(157, 157, 157);
+}
+.midmenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+  z-index: 6;
+}
+
+.topcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+  background-color: rgb(75, 151, 72);
+  position: relative;
+  z-index: 5;
+}
+
+.topcontainer:hover .midmenu,
+.topcontainer .midmenu:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.midmenu .navbar {
+  margin: 0;
+  border-radius: 0;
+}
+
+/* Hver col*-klasse holder et kort/box sentrert i sin celle */
+.col1,
+.col2,
+.col3,
+.col4,
+.col5,
+.col6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1px;
+}
+
+/* Container for midtinnhold (rad med kort) */
+.topmidcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Midt-mid container (hvis brukt) */
+.midmidcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Bottom-mid container (hvis brukt) */
+.bottommidcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Justering: større mellomrom mellom kort og mindre bokser/bilder */
+:root {
+  /* øker gap mellom kort for mer luft */
+  --card-gap: 4rem; /* økt for mer avstand mellom boksene */
+  /* gjør bildene mindre for å unngå scrolling */
+  --card-img-height: 180px; /* redusert høyde på bilder */
+}
+
+/* Gjør rader responsive: bruk flex-wrap for å få 2 rader med 3 kolonner */
+.topmidcontainer .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--card-gap); /* bruker variabel for lett justering */
+  justify-content: center;
+}
+
+/* Hver "col" tar litt mindre enn en tredjedel for å gi mer luft mellom boksene */
+.topmidcontainer .row > div {
+  /* gir hver kolonne ca 30% av bredden og trekker fra gap så de ikke går utenfor */
+  flex: 0 0 calc(30% - calc(var(--card-gap) / 3));
+  max-width: calc(30% - calc(var(--card-gap) / 3));
+  box-sizing: border-box;
+}
+
+/* Kort / box rundt hvert bilde + knapp — hver bilde får egen box */
+.topmidcontainer .image-card {
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  /* litt intern padding for bedre visuell avstand i boksen */
+  margin: 0;
+}
+
+/* Bilde størrelse i kortet — bruker CSS-variabel for enkel justering */
+.topmidcontainer .card-img-top {
+  width: 100%;
+  height: 300px; /* bruker variabel: mindre bilder */
+  object-fit: cover;
+  display: block;
+}
+
+/* Sentrer knapp i feltet under bildet */
+.topmidcontainer .card-body {
+  padding: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sørg for at knapp får litt plass og ikke krymper for mye */
+.topmidcontainer .card-body .btn {
+  min-width: 100px;
+}
+
+/* Mobil: 2 kolonner under 768px — behold god avstand også på mobil */
+@media (max-width: 768px) {
+  .topmidcontainer .row > div {
+    flex: 0 0 calc(50% - calc(var(--card-gap) / 4));
+    max-width: calc(50% - calc(var(--card-gap) / 4));
+  }
+  /* kortere bilder på mobil for bedre visning */
+  .topmidcontainer .card-img-top {
+    height: 140px; /* litt mindre på mobil */
+  }
+}
+
+/* Homepage hero and article section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  padding: 4rem 1rem;
+  background: #ffffff;
+  color: #1d3f20;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 760px;
+  padding: 2rem;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.hero-content h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 3vw, 3.25rem);
+  line-height: 1.05;
+}
+
+.hero-content p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 720px;
+}
+
+.btn {
+  border-radius: 0 !important;
+}
+
+.article-section {
+  padding: 4rem 1rem 2rem;
+  background-color: #f7f8f6;
+}
+
+.article-card {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.article-card h3 {
+  margin-bottom: 1.75rem;
+  font-size: 1.75rem;
+  color: #1d3f20;
+}
+
+.article-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e6ece2;
+}
+
+.article-block:last-child {
+  border-bottom: none;
+}
+
+.article-block p {
+  flex: 1 1 60%;
+  margin: 0;
+  color: #4a5a47;
+  font-size: 1rem;
+  line-height: 1.75;
+  min-width: 220px;
+}
+
+.article-block button {
+  flex: 0 0 auto;
+  min-width: 140px;
+}
+
+@media (max-width: 768px) {
+  .article-block {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .article-block button {
+    width: 100%;
+  }
+}
