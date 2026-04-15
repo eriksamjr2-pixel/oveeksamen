@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logg inn - Grønn logistikk AS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="logginnside.css" />
+  </head>
+  <body>
+    <div class="topcontainer">
+      <div class="overskrift">
+        <h1>GRØNN LOGISTIKK AS</h1>
+      </div>
+    </div>
+
+    <main class="login-page">
+      <section class="login-panel">
+        <h2>Logg inn</h2>
+        <p>Bruk e-post og passord for å logge inn på kundesiden.</p>
+        <form id="login-form" class="login-form">
+          <div class="form-group">
+            <label for="email">E-post</label>
+            <input id="email" type="email" class="form-control" placeholder="din@email.no" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Passord</label>
+            <input id="password" type="password" class="form-control" placeholder="Passord" required />
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-success">Logg inn</button>
+          </div>
+          <div id="login-message" class="login-message"></div>
+        </form>
+      </section>
+    </main>
+
+    <div class="bottomcontainer">
+      <footer>
+        <p>© 2026 Grønn logistikk AS, ingen rettigheter reservert.</p>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/supabase.min.js"></script>
+    <script src="logginnside.js"></script>
+  </body>
+</html>
