@@ -8,6 +8,11 @@
   color: rgb(255, 255, 255);
 }
 
+.header-link {
+  color: white;
+  text-decoration: none;
+}
+
 /* Bottomcontainer (eksempel hvis brukt senere) */
 .bottomcontainer {
   display: flex;
